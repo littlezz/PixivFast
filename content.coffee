@@ -1,4 +1,3 @@
-# todo
 previewToggle =
   ()->
     $('._layout-thumbnail.ui-modal-trigger').click()
