@@ -1,11 +1,16 @@
-previewToggle = ()->
+# todo
+previewToggle =
+  ()->
+    $('._layout-thumbnail.ui-modal-trigger').click()
 
 
 $(document).keypress(
   (e) ->
-    keycode = e.which()
-    if keycode == 115
+    key = String.fromCharCode(e.which)
+    if key == 'p' or key=='P'
       previewToggle()
 )
+
+
 
 
