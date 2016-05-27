@@ -34,6 +34,9 @@ sendDownloadMessage =
 
 
 
+give10star = () ->
+  pixiv.ranking.apply(10)
+
 
 
 $(document).keypress(
@@ -43,8 +46,15 @@ $(document).keypress(
       previewToggle()
 
     if key == 's'
-#      sendDownloadMessage()
       getImage()
+      give10star()
+
+#    if key == 'q'
+#      press = jQuery.Event("keypress");
+#      press.ctrlKey = false;
+#      press.which = 76;
+#      $(document).trigger(press);
+
 )
 
 $ ->
