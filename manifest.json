@@ -5,9 +5,20 @@
   "content_scripts": [
     {
       "matches": [
-        "*://www.pixiv.net/member_illust.php?mode=medium&illust_id=*"
+        "*://*.pixiv.net/member_illust.php?mode=medium&illust_id=*"
       ],
       "js": ["thirdPart/jquery-2.2.0.min.js", "content.js"]
     }
+  ],
+
+  "background": {
+    "persistent": false,
+    "scripts": ["bg.js"]
+  },
+
+  "options_page": "options.html",
+  "permissions": [
+    "downloads",
+    "tabs"
   ]
 }
