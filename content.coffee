@@ -63,12 +63,5 @@ $ ->
   img.src = url
   img.setAttribute('hidden', true)
   $('body').append(img)
-#  img.id = 'ggsmd'
-#  $('head').append('<meta name="referrer" content="always">')
-#  a = document.createElement('a')
-#  a.href=url
-#  a.download=''
-#  a.text='ddddd'
-#  $('.user').append(a)
 
 

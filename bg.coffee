@@ -8,13 +8,7 @@ chrome.runtime.onMessage.addListener(
       chrome.downloads.download({
         url: url,
         saveAs: true,
-#        headers: [
-#          {
-#            'name': 'Referer',
-#            'value': request.referer,
-#          }
-#        ]
       })
 )
 
-
+console.log(pixiv)

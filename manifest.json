@@ -18,7 +18,6 @@
 
   "options_page": "options.html",
   "permissions": [
-    "downloads",
-    "tabs"
+    "*://*.pixiv.net/*"
   ]
 }
