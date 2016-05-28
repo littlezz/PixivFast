@@ -3,16 +3,16 @@ previewToggle =
     $('._layout-thumbnail.ui-modal-trigger').click()
 
 
-sendDownloadMessage =
-  () ->
-    url = $('.ui-modal-close-box img')[0]['dataset']['src']
-    console.log('find url'+url)
-
-    chrome.runtime.sendMessage({
-      'action': 'download',
-      'url': url,
-      'referer': window.location.href
-    })
+#sendDownloadMessage =
+#  () ->
+#    url = $('.ui-modal-close-box img')[0]['dataset']['src']
+#    console.log('find url'+url)
+#
+#    chrome.runtime.sendMessage({
+#      'action': 'download',
+#      'url': url,
+#      'referer': window.location.href
+#    })
 
 @getImage =
   () ->
@@ -33,7 +33,7 @@ sendDownloadMessage =
     xhr.send()
 
 
-
+# because of chrome extension isolate execute env, this function is no effect
 give10star = () ->
   pixiv.ranking.apply(10)
 
@@ -47,7 +47,7 @@ $(document).keypress(
 
     if key == 's'
       getImage()
-      give10star()
+#      give10star()
 
 #    if key == 'q'
 #      press = jQuery.Event("keypress");
