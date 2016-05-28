@@ -11,10 +11,6 @@
     }
   ],
 
-  "background": {
-    "persistent": false,
-    "scripts": ["bg.js"]
-  },
 
   "options_page": "options.html",
   "permissions": [
