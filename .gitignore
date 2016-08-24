@@ -2,3 +2,4 @@
 *.js.map
 .idea/
 .DS_store
+!thirdParty/jquery-2.2.0.min.js
