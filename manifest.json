@@ -8,7 +8,7 @@
         "*://*.pixiv.net/member_illust.php?mode=medium&illust_id=*",
         "*://*.pixiv.net/bookmark.php?*"
       ],
-      "js": ["thirdPart/jquery-2.2.0.min.js", "content.js"]
+      "js": ["thirdParty/jquery-2.2.0.min.js", "content.js"]
     }
   ],
 

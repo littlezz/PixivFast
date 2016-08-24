@@ -1,5 +1,4 @@
 *.js
 *.js.map
 .idea/
-!thirdPart/jquery-2.2.0.min.js
 .DS_store
