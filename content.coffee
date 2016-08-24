@@ -57,11 +57,31 @@ $(document).keypress(
 
 )
 
-$ ->
+
+preload_image = () ->
   url = $('.ui-modal-close-box img')[0]['dataset']['src']
   img = document.createElement('img')
   img.src = url
   img.setAttribute('hidden', true)
   $('body').append(img)
+
+
+bigBookmarkImage = () ->
+  for img in $('a div img')
+    img.src = img.src.replace('150x150', '240x240')
+
+  $('.image-item').css({"width":240, 'padding':'0px'})
+
+
+
+$ ->
+  currentURL = window.location.href
+  console.log 'now: ' + currentURL
+  if currentURL.indexOf('member_illust.php') >= 0
+    console.log "preload"
+    preload_image()
+  else if currentURL.indexOf('bookmark.php') >= 0
+    console.log 'big bookmark'
+    bigBookmarkImage()
 
 
