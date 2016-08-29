@@ -33,9 +33,8 @@ previewToggle =
     xhr.send()
 
 
-# because of chrome extension isolate execute env, this function is no effect
 give10star = () ->
-  pixiv.ranking.apply(10)
+  $('#pixivfast_vbutton').click()
 
 
 
@@ -46,8 +45,9 @@ $(document).keypress(
       previewToggle()
 
     if key == 's'
+      give10star()
       getImage()
-#      give10star()
+
 
 #    if key == 'q'
 #      press = jQuery.Event("keypress");
@@ -63,6 +63,7 @@ preload_image = () ->
   img = document.createElement('img')
   img.src = url
   img.setAttribute('hidden', true)
+  img.setAttribute('id', 'pixivfast_preload_img')
   $('body').append(img)
 
 
@@ -73,8 +74,26 @@ bigBookmarkImage = () ->
   $('.image-item').css({"width":240, 'padding':'0px'})
 
 
+inject10star = () ->
+  $('#pixivfast_vbutton').click(() ->
+    console.log('press vbutton')
+    pixiv.rating.apply(10)
+  )
+
+
+
 
 $ ->
+  vbutton = document.createElement('button')
+  vbutton.setAttribute('hidden', true)
+  vbutton.setAttribute('id', 'pixivfast_vbutton')
+  $('body').append(vbutton)
+  inject_script = '(' + inject10star + ')();'
+  script = document.createElement('script')
+  script.textContent = inject_script
+  (document.head||document.documentElement).appendChild(script)
+  script.remove();
+
   currentURL = window.location.href
   console.log 'now: ' + currentURL
   if currentURL.indexOf('member_illust.php') >= 0
