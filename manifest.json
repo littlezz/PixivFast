@@ -1,7 +1,7 @@
 {
 "manifest_version": 2,
   "name": "Pixiv Fast",
-  "version": "0.1",
+  "version": "0.9.8",
   "content_scripts": [
     {
       "matches": [
