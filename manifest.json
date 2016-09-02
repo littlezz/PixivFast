@@ -6,16 +6,20 @@
     {
       "matches": [
         "*://*.pixiv.net/member_illust.php?mode=medium&illust_id=*",
-        "*://*.pixiv.net/bookmark.php?*"
+        "*://*.pixiv.net/bookmark.php*"
       ],
-      "js": ["thirdParty/jquery-2.2.0.min.js", "content.js"]
+      "js": ["thirdParty/jquery-2.2.0.min.js", "settings.js","content.js"]
     }
   ],
 
 
   "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
   "permissions": [
     "*://*.pixiv.net/*",
-    "tabs"
+    "storage"
   ]
 }

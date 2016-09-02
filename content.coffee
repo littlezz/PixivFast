@@ -1,3 +1,12 @@
+settings = {}
+
+
+
+chrome.storage.sync.get(default_options, (items) ->
+  settings = items
+)
+
+
 previewToggle =
   ()->
     $('._layout-thumbnail.ui-modal-trigger').click()
@@ -97,10 +106,12 @@ $ ->
   currentURL = window.location.href
   console.log 'now: ' + currentURL
   if currentURL.indexOf('member_illust.php') >= 0
-    console.log "preload"
-    preload_image()
+    if settings.preload
+      console.log "preload"
+      preload_image()
   else if currentURL.indexOf('bookmark.php') >= 0
-    console.log 'big bookmark'
-    bigBookmarkImage()
+    if settings.big_bookmark
+      console.log 'big bookmark'
+      bigBookmarkImage()
 
 
