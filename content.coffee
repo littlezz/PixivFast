@@ -12,16 +12,7 @@ previewToggle =
     $('._layout-thumbnail.ui-modal-trigger').click()
 
 
-#sendDownloadMessage =
-#  () ->
-#    url = $('.ui-modal-close-box img')[0]['dataset']['src']
-#    console.log('find url'+url)
-#
-#    chrome.runtime.sendMessage({
-#      'action': 'download',
-#      'url': url,
-#      'referer': window.location.href
-#    })
+
 
 @getImage =
   () ->
@@ -56,14 +47,6 @@ $(document).keypress(
     if key == 's'
       give10star()
       getImage()
-
-
-#    if key == 'q'
-#      press = jQuery.Event("keypress");
-#      press.ctrlKey = false;
-#      press.which = 76;
-#      $(document).trigger(press);
-
 )
 
 

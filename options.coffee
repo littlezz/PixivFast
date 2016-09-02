@@ -1,13 +1,3 @@
-#@show = () ->
-#  chrome.downloads.search({}, (e) ->
-#    console.log(e[0])
-#    $('#s').text(e[0]['filename'])
-#
-#  )
-
-#show()
-
-
 
 load_options = () ->
   chrome.storage.sync.get(default_options, (items) ->
