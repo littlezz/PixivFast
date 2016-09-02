@@ -6,5 +6,13 @@ Pixiv Fast
 - 替换收藏夹的预览图, 从150x150 到 240x240
 
 
+编译源码
+----
+需要安装coffeescript
+
+`coffee -c .`
+
+
+
 
 
