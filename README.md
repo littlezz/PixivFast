@@ -12,6 +12,10 @@ Pixiv Fast
 
 `coffee -c .`
 
+Screenshot
+----
+![](./screenshot/pixivfast_preview.png)
+
 
 
 
